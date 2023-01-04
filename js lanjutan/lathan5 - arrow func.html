@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		// const tampilNama = nama => {
+			// return `hallo, ${nama}`;
+		// }
+
+		const nama = (nama, waktu) => {
+			return `selamat ${waktu} ${nama}`;
+		}
+
+		//implisit return 
+		const tampilNama = nama => `hallo, ${nama}`;
+
+		let mahasiswa = ['dikky', 'dimas', 'fillah'];
+
+		//versi 1
+		let jumlah = mahasiswa.map(function (nama){
+			return nama.length;
+		});
+
+		console.log(jumlah)
+
+		//versi 2
+		let jumlah2 = mahasiswa.map(nama => nama.length);
+
+		console.log(jumlah2);
+
+		let jumlah3 = mahasiswa.map(nama => ({ nama: nama, jmlHuruf: nama.length}));
+		console.table(jumlah3);
+	</script>
+
+</body>
+</html>

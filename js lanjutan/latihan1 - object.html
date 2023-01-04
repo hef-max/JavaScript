@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		// cara untuk membuat object pada js
+		// 1. object literal
+		// let mahasiswa = {
+		// 	nama : "hefri anesti",
+		// 	energy : 10,
+		// 	makan: function(porsi){
+		// 		this.energy = this.energy + porsi;
+		// 		console.log(`hallo ${this.nama}, selamat makan!`);
+		// 	}
+		// }
+
+//error, tidak boleh ada nama func yg sama
+		// let mahasiswa = {
+		// 	nama : "doddy",
+		// 	energy : 10,
+		// 	makan: function(porsi){
+		// 		this.energy = this.energy + porsi;
+		// 		console.log(`hallo ${this.nama}, selamat makan!`);
+		// 	}
+		// }
+
+		//2. func declaration
+		// function Mahasiswa(nama, energi){
+		// 	let mahasiswa = {};
+		// 	mahasiswa.nama = nama;
+		// 	mahasiswa.energi = energi;
+
+		// 	mahasiswa.makan = function(porsi) {
+		// 		this.energi += porsi;
+		// 		console.log(`hello ${mahasiswa.nama}, selamat makan!`)
+		// 	}
+
+		// 	mahasiswa.main = function(jam) {
+		// 		this.energi -= jam;	
+		// 		console.log(`hallo ${mahasiswa.nama}, selamat bermain!`);
+		// 	}
+
+		// 	return mahasiswa;
+		// }
+
+		// let sandhika = Mahasiswa('sandhika', 10);
+		// let doddy = Mahasiswa('doddy', 20);
+
+
+
+		//3. func construction
+		function Mahasiswa(nama, energi){
+			this.nama = nama;
+			this.energi = energi;
+
+			this.makan = function(porsi) {
+				this.energi += porsi;
+				console.log(`hello ${this.nama}, selamat makan!`)
+			}
+
+			this.main = function(jam) {
+				this.energi -= jam;	
+				console.log(`hallo ${this.nama}, selamat bermain!`);
+			}
+		}
+
+		let sandhika = new Mahasiswa('sandhika', 10);
+		let doddy = new Mahasiswa('doddy', 20);
+
+	</script>
+
+</body>
+</html>

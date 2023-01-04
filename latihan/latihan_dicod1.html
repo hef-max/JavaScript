@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+
+
+	<script type="text/javascript">
+		//object
+		let restaurant = {
+			name : "kokoh",
+			city : "Sleman",
+			"favorite drink" : "cola",
+			"favorite food" : "seafood",
+			isVegan : false
+		}
+
+		console.log(restaurant);
+
+		let name = restaurant.name;
+
+		let favoriteDrink = restaurant["favorite drink"];
+
+		//array
+		let evenNumber = []
+		for(let i = 1; i <= 100;i++){
+			if(i % 2 == 0){
+				evenNumber.push(i);
+			}
+		}
+
+		//map
+		lcet currency = new Map([
+			["USD", 14000],
+			["JPY", 131],
+			["SGD", 11000],
+			["MYR", 3500]
+			]);
+
+		//function
+
+		function minimal(a, b){
+			result = 0;
+
+			if(a < b || b < a){
+				result = a;
+			}
+
+			else if(a == b){
+				result = a;
+			}
+
+			return result;
+		}
+
+	</script>
+
+</body>
+</html>

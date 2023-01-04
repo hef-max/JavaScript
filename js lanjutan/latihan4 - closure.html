@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		//sama kaya fuction private
+		function ucapkanSalam(waktu){
+			return function(nama){
+				console.log(`hallo ${nama}, selamat ${waktu}, semoga hari mu menyenangkan`);
+			}
+		}
+
+		//vektori func
+		let pagi = ucapkanSalam("pagi");
+
+		pagi("sandhika");
+
+		let add = (function(){
+			let counter = 0;
+			return function(){
+				return ++counter;
+			}
+		})();
+
+		console.log(add());
+	</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+
+	<script type="text/javascript">
+
+		//prototype
+		function Mahasiswa(nama, energi){
+			this.nama = nama;
+			this.energi = energi;
+		}
+
+		Mahasiswa.prototype.makan = function(porsi) {
+			this.energi += porsi;
+			return `hallo ${this.nama}, selamat makan`;
+		};
+
+		Mahasiswa.prototype.main = function(jam){
+			this.energi -= jam;
+			return `selamat main`;
+		}
+
+		Mahasiswa.prototype.tidur = function(jam){
+			this.energi += jam;
+			return `selamat, tidur`;
+		}
+
+		//versi class
+
+		let sandhika = new Mahasiswa('sandhika', 10);
+		let doddy = new Mahasiswa('doddy', 20);
+	</script>
+
+</body>
+</html>

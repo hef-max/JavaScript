@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		var mhs = {
+			nama : "Hefri ANesti",
+			umur: 19,
+			univ: "universitas teknologi yogyakarta",
+			alamat : {
+				jalan : "Gang Dewi sinta",
+				kec : "Mlati",
+				kab : "Sleman"
+			}
+		}
+
+		//object literal
+		var mhs1 = {
+			nama : "Lula",
+			nrp : "08920231",
+			email :"Lula@mail.com",
+			prodi : "IF"
+		}
+
+		//func deklarasi
+		function buatObjet(nama, nrp, email, jurusan){
+			var mhs = {};
+			mhs.nama = nama;
+			mhs.nrp = nrp;
+			mhs.email = email;
+			mhs.jurusan = jurusan;
+			return mhs;
+		}
+
+		var mhs2 = buatObjet("Lula", "09288", "lulsa@mail.com", "IF");
+
+
+		//constructor
+		function Mahasiswa(nama, nrp, email, jurusan){
+			this.nama = nama;
+			this.nrp = nrp;
+			this.email = email;
+			this.jurusan = jurusan;
+		}
+
+		var mhs3 = new Mahasiswa("Nana", "09288", "nana@mail.com", "Fisika");
+
+	</script>
+
+</body>
+</html>
